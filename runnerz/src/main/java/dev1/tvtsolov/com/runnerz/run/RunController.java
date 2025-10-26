@@ -1,5 +1,6 @@
 package dev1.tvtsolov.com.runnerz.run;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.web.bind.annotation.*;
@@ -22,16 +23,16 @@ public class RunController {
     List<Run> findAll(){
         return runRepository.findAll();
     }
-
-    @GetMapping("/api/ho")
-    String anythingWorks(){
-        return "sagrgesadasadae2";
-    }
-
-    @GetMapping("/hello")
-    String  home(){
-        return "Hello Dolly!";
-    }
+//
+//    @GetMapping("/api/ho")
+//    String anythingWorks(){
+//        return "sagrgesadasadae2";
+//    }
+//
+//    @GetMapping("/hello")
+//    String  home(){
+//        return "Hello Dolly!";
+//    }
 
 
     @GetMapping("/{id}")
@@ -48,14 +49,14 @@ public class RunController {
     //post
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    void create(@RequestBody Run run){
+    void create(@Valid @RequestBody Run run){
         runRepository.create(run);
     }
 
     //put
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    void update(@RequestBody Run run, @PathVariable Integer id) {
+    void update(@Valid @RequestBody Run run, @PathVariable Integer id) {
         runRepository.update(run, id);
     }
 
