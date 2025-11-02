@@ -1,0 +1,4 @@
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (1, 'Morning Run HAW', '2025-01-01 06:00:00', '2025-01-01 07:00:00', 5, 'OUTDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (2, 'Another Run', '2025-04-01 06:00:00', '2025-04-01 07:00:00', 2, 'INDOOR');
